@@ -12,6 +12,7 @@ export const AddCategory = ( {setCategories} ) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log('handleSubmit', inputValue);
         //we make the callback to setCategories
         //we could also send the categories as a prop
 
@@ -23,6 +24,7 @@ export const AddCategory = ( {setCategories} ) => {
 
   return (
         <form onSubmit={ handleSubmit }> {/*form would be the grouping element, we dont need the fragment */}
+            <p> { inputValue } </p>
             <input
                 type="text"
                 value={inputValue}
